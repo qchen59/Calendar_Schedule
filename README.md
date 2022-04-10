@@ -1,2 +1,2 @@
-# WordScrambled-
+# WordScrambled
 Javascript word scrambled game
