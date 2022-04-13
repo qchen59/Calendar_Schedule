@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="calendar.css">
+    <title>Document</title>
+</head>
+<body>
+    <h2 align=center>Calendar</h2>
+    <div class="container">
+        <div class="calendar">
+            <div class="month">      
+                <ul>
+                    <li class="prev"><button onclick="prev()">&#10094;</button></li>
+                    <li class="next"><button onclick="next()">&#10095;</button></li>
+                    <li>
+                    <p id="year"></p>
+                    <span style="font-size:18px"><p id="month"></p>
+                    </span>
+                    </li>
+                </ul>
+            </div>
+    
+            <ul class="days" id="dayList">  
+            </ul>
+        </div>
+
+
+        <div class="events">
+            <h2>Events of the day</h2>
+            <hr noshade size=10 color=#508EAD width=50% align=left>
+            <ul id="eventsList">   
+                <!-- <div class="vl">
+                    <div class="block">
+                        <h3>Event Title</h3>
+                        <li>Description</li>
+                        <li>4/04/2022 08:00AM - 05/04/2022 09:00AM</li>
+                    </div>
+                </div> -->
+
+            </ul>
+        </div>
+
+        <div id="form_container" class="addNew">
+
+            <form id="frm1">
+                <div class="form_description">
+                    <h2>Add new event</h2>
+                    <hr noshade size=10 color=#508EAD width=50% align=left>
+                </div>
+                <ul >
+        
+                    <li id="li_1" >
+                        <label class="description" for="name">Event Title </label>
+                        <div>
+                            <input path="name" id="name" name="name" class="element text medium" type="text" maxlength="255" value=""/>
+                        </div>
+                    </li>		
+                    <li id="li_2" >
+                    <label class="description" for="description">Description </label>
+                    <div>
+                        <input path="description" id="description" name="description" class="element text medium" type="text" maxlength="255" value=""/>
+                    </div>
+                    </li>	
+                    <li id="li_3" >
+                        <label class="sdate" for="sdate">Start Time </label>
+                        <div>
+                            <input id="sdate" path="sdate" name="sdate" class="element text medium" type="date" min="2000-01-01" max="2090-12-31" value=""/>
+                            <input type="time" id="stime" name="stime" min="00:00" max="24:00" required>
+                        </div>
+                    </li>		
+                    <li id="li_4" >
+                        <label class="edate" for="edate">End time </label>
+                        <div>
+                            <input id="edate" path="edate" name="edate" class="element text medium" type="date" min="2000-01-01" max="2090-12-31" value=""/>
+                            <input type="time" id="etime" name="etime" min="00:00" max="24:00" required>
+                        </div>
+                    </li>		
+                    <li class="buttons">
+                            <input class="add" type="button" name="submit" onclick="addEvent()" value="Add"/>
+                    </li>
+                    <li id="message" class="message"></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+    <script src="calendar.js"></script>
+</body>
+</html>
