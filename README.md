@@ -1,2 +1,2 @@
-# WordScrambled
-Javascript word scrambled game
+# Javascript Calendar
+Javscript and HTML Calendar
